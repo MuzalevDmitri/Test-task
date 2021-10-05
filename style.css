@@ -18,6 +18,7 @@ body {
     border: 0;
     font-size: 20px;
     font-weight: 100;
+    cursor: pointer;
 }
 
 
@@ -50,19 +51,22 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: #E8EBF3;
-    ;
-    width: 900px;
+    min-width: 400px;
+    max-width: 1200px;
     padding: 25px;
     transition: 0.5s all;
     border-radius: 10px;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
 
 }
 
 .popup.active {
     transform: translate(-50%, -50%) scale(1);
     transition: 0.5s all;
+    overflow-y: scroll;
+
 }
 
 .close-popup {
@@ -192,3 +196,16 @@ body {
     padding: 3px 25px;
 
 }
+
+@media screen and (max-width: 680px) {
+    .blocks {
+        flex-direction: column;
+    }
+
+    .popup {
+        width: 80%;
+        height: 100%;
+    }
+ }
+
+ 
